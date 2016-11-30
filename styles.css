@@ -1,0 +1,85 @@
+img {
+	/* this says that width is limited to the parent - can't be bigger than that */
+	max-width: 100%;
+}
+
+#facebook-wrapper {
+	/* if we need whole page styles */
+}
+
+#header {
+	background-color: #3B5998;
+	/* overflow hidden enables the header to inherit height from children */
+	overflow: hidden;
+	width: 100%;
+}
+
+#header-inner {
+	max-width: 900px;
+	margin:  auto;
+}
+
+#left-header {
+
+}
+
+#fb-logo {
+	/* div must have height and width or we won't see anything */
+	height: 24px;
+	width: 24px;
+	/* background images don't stretch the div out, they just fill up the div */
+	background-image: url('fb_sprite.png');
+	/* below copied from FB inspect - selecting the position of the appropriate image in the sprite*/
+	background-size: 26px 905px;
+    background-position: 0 -163px;
+    margin-left: 10px;
+}
+
+#fb-logo, #fb-search {
+	float:  left;
+	margin-left: 10px;
+}
+
+#fb-search input {
+	border-radius: 5px;
+	width: 200px;
+}
+
+#right-header {
+	float: right;
+}
+
+#right-header div {
+	float: left;
+}
+
+#small-avatar {
+	height: 24px;
+	width: 24px;
+}
+
+
+/*this is a catch-all for the 3 social icon divs */
+.social-icon {
+/* 	has to have a height so that the sprites will fit - the overall div didn't have height
+ */	height: 24px;
+	width: 24px;
+	/* only have to put the background image url here because friends/messages/notifications all use the same sprite url - if only some of the classes used it and not the others, then it would have to be applied to the ones using the sprite url */
+	background-image: url('fb_sprite.png');
+	/* all 4 rules with social icon will inherit the same background size, so it's only placed here */
+	background-size: 26px 905px;
+}
+/* this is specific to the friends div */
+.friends {
+    background-position: 0 -188px;
+}
+
+/* this is specific to the messages div */
+.messages {
+	background-position: 0 -338px;
+}
+
+/* this is specific to the notifications div */
+.notifications {
+	background-position: 0 -238px;
+}
