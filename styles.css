@@ -1,248 +1,147 @@
-html {
-	background-color: #E9EBEE;
-}
-
 img {
-	/* this says that width is limited to the parent - can't be bigger than that */
-	max-width: 100%;
-}
-
-#facebook-wrapper {
-	/* if we need whole page styles */
+	width: 100%;
 }
 
 #header {
+	position: fixed;
 	background-color: #3B5998;
-	/* overflow hidden enables the header to inherit height from children */
-	overflow: hidden;
+	height:  42px;
 	width: 100%;
 }
 
-#header-inner {
-	max-width: 900px;
+#inner-header {
+	/* make the background color bright for debugging purposes */
+	background-color: #3B5998; 
+	height:  42px;
+	width: 80%;
 	margin:  auto;
+	/* position: relative; */
+	/* bottom:  16px; */
 }
 
 #left-header {
-
-}
-
-#fb-logo {
-	/* div must have height and width or we won't see anything */
-	height: 24px;
-	width: 24px;
-	/* background images don't stretch the div out, they just fill up the div */
-	background-image: url('fb_sprite.png');
-	/* below copied from FB inspect - selecting the position of the appropriate image in the sprite*/
-	background-size: 26px 905px;
-    background-position: 0 -163px;
-    margin-left: 10px;
-}
-
-#fb-logo, #fb-search {
 	float:  left;
-	margin-left: 10px;
-	margin-top: 9px;
-}
-
-#fb-search {
-	width: 50%;
-}
-
-#fb-search input {
-	border-radius: 5px;
-	width: 200px;
- 	height: 21px;
-    padding-top: 2px;
-    height: 26px;
-    position: relative;
-    width: 100%;
-    bottom: 5px;
 }
 
 #right-header {
-	float: right;
-	word-spacing: 1em;
+	float:  right;
 }
 
-#right-header div {
+#fb-logo {
 	float: left;
+	background-image: url('fb_sprite.png');
+	background-size: 26px 905px;
+	background-position: 0 -163px;
+	height: 24px;
+	width: 24px;
+	margin-top: 8px;
+}
+
+#header-search {
+	float:  left;
+}
+input {
+	float: left;
+    margin-top: 1px;
+	padding-right: 240px;
+	height:  17px;
+	margin-left:  7px;
+	margin-top: 8px;
+	border-radius: 5px;
+}
+button {
+	height:  25px;
+	width:  31px;
+	float:  right;
+	margin-top: 8px;
+	padding-top: 2px;
+	padding-bottom: 0;
+	border-radius: 5px;
+	background-color: #f6f7f9;
+}
+
+#spyglass {
+	background-image: url('fb-sprite-3.png');
+	background-position: -54px -207px;
+	height:  18px;
+}
+
+.header-icon {
+	float:  left;
+}
+
+.header-icon.social {
+	float:  left;
+	background-image: url('fb_sprite.png');
+	height:  24px;
+	width:  24px;
+	background-size: 26px 905px;
+	margin-left: 15px;
+	margin-top: 8px;
+}
+
+#spacer {
+	float:  left;
+	margin-top: 13px;
 }
 
 #small-avatar {
+	float:  left;
 	height: 24px;
 	width: 24px;
-	margin-top: 9px;
-    margin-right: -23px;
+	background-image: url('Liz_FB.png');
+	background-size: 24px 24px;
+	margin-right: 9px;
+	margin-top: 8px;
 }
 
-
-/*this is a catch-all for the 3 social icon divs */
-.social-icon {
-/* 	has to have a height so that the sprites will fit - the overall div didn't have height
- */	height: 24px;
-	width: 24px;
-	/* only have to put the background image url here because friends/messages/notifications all use the same sprite url - if only some of the classes used it and not the others, then it would have to be applied to the ones using the sprite url */
-	background-image: url('fb_sprite.png');
-	/* all 4 rules with social icon will inherit the same background size, so it's only placed here */
-	background-size: 26px 905px;
-	margin-left: 5px;
-}
-/* this is specific to the friends div */
-.friends {
-    background-position: 0 -188px;
+#small-name {
+	margin-right: 10px;
+	margin-top: 13px;
+	font-family: sans-serif;
+	font-size: 10pt;
+	color:  white;
 }
 
-/* this is specific to the messages div */
-.messages {
+#header-home {
+	margin-left: 10px;
+	margin-top: 12px;
+	font-family: sans-serif;
+	font-size: 10pt;
+	color:  white;
+}
+/* apply background position, size and url to all the little logos in the right header */
+#friends-icon {
+	background-position: 0 -188px;
+}
+
+#msg-icon {
 	background-position: 0 -338px;
 }
 
-/* this is specific to the notifications div */
-.notifications {
+#small-globe {
 	background-position: 0 -238px;
+	margin-right: 14px;
 }
 
-.lock {
-	background-position: 0 -859px;
-	height: 16px;
-	/* this will override the social icon margin */
-	margin-left: 10px;
-	/* border-left:  1px solid #444;
-	padding-left:  10px; */
+#small-lock {
+	background-position: 3px -854px;
 }
 
-.down-arrow {
-	background-position: 0 -825px;
-	height: 16px;
+#small-dropdown {
+	background-position: 0 -821px;
 }
 
-.spacer {
-	line-height: 40px;
-	margin: 0 10px;
-	padding-left: 5px;
-}
-
-#cover-photo-wrapper {
+/* cover photo styling starts here */
+#cover-photo-with-menu {
+	margin-top: 42px;
 	max-width: 900px;
+	height: 851px;
 	margin:  auto;
-	width: 100%;
+
 }
 
-#cover-photo-lower {
-	position: relative;
-}
-
-#small-camera {
-	height: 30px;
-	width: 28px;
-	background-image: url('interactive_sprites_FB.png');
-	background-size: 27px 287px;
-	background-position: 0 0;
-	z-index: 3;
-	position: absolute;
-	left:  10px;
-	top:  138px;
-}
-
-#cover-photo-right {
-	margin-top: -35px;
-}
-
-#big-photo {
-	max-height: 350px;
-	overflow: hidden;
-}
-
-#big-photo img {
-	width: 100%;
-}
-
-#big-avatar {
-	float: left;
-	height: 168px;
-	width: 168px;
-	position: absolute;
-	z-index: 2;
-	top:  -110px;
-	left: 15px;
-}
-
-#big-avatar img {
-	
-}
-
-#avatar-name {
-	float: left; 
-	padding-left: 30px;
-	padding-top: 12px;
-	font-family: -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', sans-serif;
-	color:  white;
-}
-
-#home-link {
-	padding-left: 15px;
-	padding-top: 12px;
-}
-
-#big-avatar-name {
-	float: left; 
-	padding-left: 30px;
-	z-index: 1;
-	position: relative;
-	margin-left: 173px;
-	color:  white;
-	font-size: 24px;
-    font-weight: 500;
-    line-height: 30px;
-}
-
-#cover-buttons {
-	float:  right;
-	position: relative;
-	padding-right: 20px;
-	letter-spacing: .5em;
-}
-
-#cover-menu {
-	width:  100%;
-	padding-bottom: 12px;
-	background-color: #FFFFFF;
-	max-width: 900px;
-	overflow: hidden;
-	text-align: center;
-}
-
-.cover-menu-item {
-	display: inline-block;
-	list-style-type: none;
-	padding-top: 13px;
-	padding-right: 10px;
-	padding-left: 20px;
-}
-
-.cover-menu-item:last-child {
-	margin-right: 128px;
-}
-
-#bottom-half {
-	max-width:  900px;
-	margin:  auto;
-	width: 100%;
-}
-
-#left-column-content {
-	width: 30%;
-	position: absolute;
-	height: 100px;
-}
-
-#right-column-content {
-	width: 60%;
-}
-
-#intro {
-	border: 1px solid;
-    border-color: #e5e6e9 #dfe0e4 #d0d1d5;
-    border-radius: 3px;
+#cover-photo {
+	width: 851px;
+	height: 413px;
 }

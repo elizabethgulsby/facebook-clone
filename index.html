@@ -1,105 +1,61 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>A Facebook Clone</title>
-	<link rel="stylesheet" type="text/css" href="reset.css">
-	<link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-
-<!-- Overall page wrapper -->
-	<div id="facebook-wrapper">
-
-		<div id="header">
-		<!-- header div to contain all header elements -->
-			<div id="header-inner">
-				<div id="left-header">
-				<!-- logo, search bar -->
-				<div id="fb-logo"></div>
-
-				<div id="fb-search">
-					<input type="text" value="Your Name">
-				</div>
-
-			</div>
-			<div id="right-header">
-				<!-- avatar, name, home, social icons, lock, downarrow -->
-				<div id="small-avatar">
-					<img src="Liz_FB.png">
-				</div>
-
-				<div id="avatar-name">Elizabeth</div>
-				<!-- The home button -->
-
-				<div class="spacer">|</div>
-				<div id="home-link">
-					<a href="#">Home</a>
-				</div>
-				<!-- social icons -->
-				<div class="social-icon friends">
-				</div>
-				<div class="social-icon messages">
-				</div>
-				<div class="social-icon notifications">
-				</div>
-				<div class="spacer">|</div>
-				<div class="social-icon lock">
-				</div>
-				<div class="social-icon down-arrow">
-				</div>
-			</div>
-		</div>
-	</div>
-
-		<div id="cover-photo-wrapper">
-			<!-- big photo -->
-			<div id="big-photo">
-				<img src="cover_photo.jpg">
-			</div>
-			<!-- big avatar, name, 2 buttons -->
-			<!-- nav menu -->
-			<!-- camera up in the top corner that changes cover photo -->
-			<div id="cover-photo-lower">
-				<div id="big-avatar">
-				<div id="small-camera"></div>
-					<img src="Liz_FB.png">				
-				</div>
-				<div id="cover-photo-right">
-					<div id="big-avatar-name">Elizabeth Gulsby</div>
-					<div id="cover-buttons">
-						<button>Update Info</button>
-						<button>Activity Log</button>
-					</div>
-					<div id="cover-menu">
-						<li class="cover-menu-item">Timeline</li>
-						<li class="cover-menu-item">About</li>
-						<li class="cover-menu-item">Friends</li>
-						<li class="cover-menu-item">Photos</li>
-						<li class="cover-menu-item">More</li>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div id="bottom-half">
-
-			<!-- content for the left side of the page -->
-			<div id="left-column-content">
-				<div id="intro">
-					hello
-				</div>
-				<div id="photos"></div>
-			</div>
-
-			<!-- content for the right side of the page -->
-			<div id="right-column-content">
-				<div id="status"></div>
-				<div id="updates"></div>
+	<head>
+		<title>A Facebook Clone, Take Two</title>
+		<link rel="stylesheet" type="text/css" href="reset.css">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body>
+		<div id="facebook-wrapper">
+			<div id="header">
 				
+			
+				<div id="inner-header">
+
+					<div id="left-header">
+						<div id="fb-logo"></div>
+							<div id="header-search">
+								<input type="text" placeholder="Your Name">
+							</div>
+							<button>
+								<div id="spyglass"></div>
+							</button>		
+					</div>
+
+					<div id="right-header">
+						<!-- small avatar, name | home, friends>msg>globe | lock>dnarrow -->
+						<div class="header-icon" id="small-avatar"></div>
+						<div class="header-icon" id="small-name">Elizabeth</div>
+						<div id="spacer">|</div>
+						<div class="header-icon" id="header-home"><a href="#">Home</a></div>
+						<div class="header-icon social" id="friends-icon"></div>
+						<div class="header-icon social" id="msg-icon"></div>
+						<div class="header-icon social" id="small-globe"></div>
+						<div id="spacer">|</div>
+						<div class="header-icon social" id="small-lock"></div>
+						<div class="header-icon social" id="small-dropdown"></div>
+					</div>
+
+				</div>
+
 			</div>
+
+			<!-- start the large photo div below - sibling of header -->
+			<div id="cover-photo-with-menu">
+				<div id="cover-photo"><img src="/Users/elizabethgulsby/Desktop/DigitalCrafts/11-16immersive/unit1/facebook-clone/cover_photo.jpg">
+				</div>
+				<div id="menu">
+					<div id="menu-item">Timeline</div>
+					<div id="menu-item">About</div>
+					<div id="menu-item">Friends</div>
+					<div id="menu-item">Photos</div>
+					<div id="menu-item">More</div>
+				</div>
+			</div>
+
+			<!-- start the section with profile pic/name/buttons here - sibling of cover photo with menu -->
+			
 		</div>
 
-	</div>
-
-</body>
+	</body>
 </html>
