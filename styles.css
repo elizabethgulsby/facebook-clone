@@ -2,11 +2,16 @@ img {
 	width: 100%;
 }
 
+body {
+	background-color: #E9EBEE;
+}
+
 #header {
 	position: fixed;
 	background-color: #3B5998;
 	height:  42px;
 	width: 100%;
+	z-index: 1;
 }
 
 #inner-header {
@@ -133,15 +138,114 @@ button {
 }
 
 /* cover photo styling starts here */
+/* make position relative */
 #cover-photo-with-menu {
 	margin-top: 42px;
 	max-width: 900px;
-	height: 851px;
+	height: 500px;
 	margin:  auto;
+}
 
+#small-camera {
+	z-index: 2;
+	position: absolute;
+	background-image: url('interactive_sprites_FB.png');
+	width: 26px;
+    height: 31px;
+    background-position: 0 0;
+    background-size: 26px 383px;
+    top: 60px;
+    left: 147px;
 }
 
 #cover-photo {
+	width: 851px;
+	height: 413px;
+}
+
+#menu {
+	float: left;
+	height:  50px;
+	width: 94.4%;
+	border-bottom: 1px solid #e9eaed;
+	border-left: 1px solid #e9eaed;
+	border-right: 1px solid #e9eaed;
+	background-color: #FFFFFF
+}
+
+.menu-item {
+	float: left;
+	padding: 17px;
+	border-right: 1px solid #e9eaed;
+	font-size: 14px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color:  #365899;
+
+}
+
+.menu-item:first-child {
+	margin-left: 200px;
+	border-left: 1px solid #e9eaed;
+}
+/* make position absolute - nest it within the cover photo with menu div in order to overlay into that div */
+#pic-and-buttons-parent {
+	margin-top: 42px;
+	height:  168px;
+	max-width: 900px;
+	margin: auto;
+	position: relative;
+    bottom: 227px;
+    left: 18px;
+}
+
+#pic-and-buttons {
+	width: 851px;
+	height: 413px;
+}
+
+#profile-pic {
+}
+
+#profile-pic img{
+	height: 168px;
+	width: 168px;
+	border-radius: 5px;
+}
+
+#profile-name {
+	float: left;
+	position: relative;
+    bottom: 72px;
+    left: 183px;
+    color:  white;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+#activity-buttons button {
+	margin-left: 10px;
+	padding-bottom: 3px;
+    padding-left: 4px;
+    margin-right: 7px;
+    height: 35px;
+    width: 120px;
+    position: relative;
+    bottom: 87px;
+    right: 66px;
+}
+
+#bottom-half-parent {
+	margin-top: 42px;
+	height:  168px;
+	max-width: 900px;
+	margin: auto;
+	position: relative;
+    bottom: 187px;
+}
+
+#bottom-half {
 	width: 851px;
 	height: 413px;
 }
