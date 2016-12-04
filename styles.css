@@ -147,7 +147,7 @@ button {
 }
 
 #small-camera {
-	z-index: 2;
+	/* z-index: 1; */
 	position: absolute;
 	background-image: url('interactive_sprites_FB.png');
 	width: 26px;
@@ -155,7 +155,7 @@ button {
     background-position: 0 0;
     background-size: 26px 383px;
     top: 60px;
-    left: 147px;
+    left: 175px;
 }
 
 #cover-photo {
@@ -238,14 +238,316 @@ button {
 
 #bottom-half-parent {
 	margin-top: 42px;
-	height:  168px;
+	height:  900px;
 	max-width: 900px;
 	margin: auto;
 	position: relative;
     bottom: 187px;
+    /* for debugging */
+	/* border:  1px solid; */
 }
 
 #bottom-half {
 	width: 851px;
-	height: 413px;
+	height: 900px;
+	/* for debugging */
+	/* border:  1px solid; */
+}
+
+#left-column-holder {
+	float: left;
+	/* max-width: 323px; */
+	width: 367px;
+	/* border exists for debugging */
+	/* border: 1px solid; */
+    left: -167px;
+    position: relative;
+    bottom: 3px;
+}
+
+#intro {
+	float: left;
+	/* for debugging */
+	border: 1px solid #e5e6e9 #dfe0e4 #d0d1d5;
+	width: 367px;
+	height: 200px;
+	background-color: white;
+	border-radius: 8px;
+}
+
+#photos-section {
+	width: 367px;
+/* 	for debugging
+ */	border:  1px solid #e5e6e9 #dfe0e4 #d0d1d5;
+ 	height: 300px;
+ 	background-color: white;
+ 	position: relative;
+ 	top: 215px;
+ 	border-radius: 8px;
+ 	/* border-color: #e5e6e9 #dfe0e4 #d0d1d5; */
+}
+
+#photos-section img {
+	height:  130px;
+	width:  119px;
+	position: relative;
+	bottom: 185px;
+}
+
+#photos-section p {
+	position: relative;
+	bottom: 194px;
+    left: 50px;
+    font-size: 12pt;
+    font-family: sans-serif;
+}
+
+#photos-sprite {
+	height:  24px;
+	width: 24px;
+	background-position: -62px -87px;
+	background-size: 171px 124px;
+	background-image: url('fb-sprite-6.png');
+	position: absolute;
+	top: 3px;
+    left: 12px;
+}
+
+#right-column-holder {
+	float: right;
+	width: 460px;
+    position: relative;
+    /* border exists for debugging */
+    /* border: 1px solid; */
+/*     right: -274px;
+ */ bottom: 307px;
+ 	height:  900px;
+}
+
+#status-blank {
+	/* border exists for debugging */
+	/* border:  1px solid; */
+	height:  200px;
+	background-color: white;
+	border-radius: 5px;
+	position: relative;
+	top: 5px;
+}
+
+#status-icon-box {
+	height: 40px;
+	width:  460px;
+	border-bottom: 1px solid #e5e5e5;
+	background-color: #F6F7F9;
+	font-family: sans-serif;
+	font-size: 10pt;
+	color: #365899;
+	font-weight: bold;
+	border-radius: 5px;
+}
+
+#status-space {
+	float:  left;
+	position: relative;
+    left: 44px;
+    top: 9px;
+}
+
+#status-space2 {
+	float: left;
+	position: relative;
+	left: 108px;
+    top: 9px;
+}
+
+.status-sprite {
+	float:  left;
+	height:  30px;
+	width: 30px;
+}
+
+#pencil {
+	background-size: 27px 287px;
+	background-image: url('interactive_sprites_fb.png');
+	background-position: 0 -132px;
+	display: inline-block;
+	height:  16px;
+	width: 16px;
+	margin-left: 27px;
+	position: relative;
+    right: 15px;
+    top: 7px;
+}
+
+#pencil p {
+	position: relative;
+	left: 22px;
+    top: 1px;
+}
+
+#camera {
+	background-image: url('fb-sprite-4.png');
+	background-size: 145px 293px;
+	background-position: -98px -197px;
+	display: inline-block;
+	height: 16px;
+	width: 16px;
+	margin-left: 60px;
+	position: relative;
+	top: 7px;
+}
+
+#camera p {
+	position: relative;
+    left: 25px;
+    width: 88px;
+}
+
+#flag {
+	background-image: url('interactive_sprites_fb.png');
+	display: inline-block;
+	height: 16px;
+	width: 25px;
+	background-position: 0 -98px;
+	background-size: 27px 287px;
+	margin-left: 120px;
+	position: relative;
+	top: 7px;
+}
+
+#flag p {
+	position: relative;
+	left: 30px;
+    width: 70px;
+}
+
+#status-posted {
+	border:  1px solid;
+	position: relative;
+    top: 13px;
+    height: 200px;
+
+}
+
+#status-input-area {
+	position: relative;
+}
+
+#status-pic {
+	height: 40px;
+	width: 40px;
+	border:  1px solid black;
+	position: relative;
+	top: 10px;
+    left: 10px;
+}
+
+#filler-text {
+	position: relative;
+	left: 80px;
+    top: -18px;
+    padding-bottom: 55px;
+    color: #90949C;
+    font-family: sans-serif;
+    font-size: 14pt;
+}
+
+#status-hr {
+
+}
+#click-to-post {
+	position: relative;
+    right: 10px;
+    bottom: 10px;
+}
+
+#click-to-post button {
+	margin-right: 10px;
+	width: 60px;
+    height: 28px;
+}
+
+/* finish left col, start right column this weekend */
+/* for intro: all the pics with class: intro photos get same url - only bkgd pos applies to indiv sprites */
+
+.intro-photos {
+	background-image: url('fb-sprite-4.png');
+}
+
+#padded-globe {
+	width: 24px;
+    height: 24px;
+    background-position: -120px -86px;
+    background-size: 145px 293px;
+    position: relative;
+    left: 12px;
+    margin-bottom: 15px;
+    margin-top: 18px;
+}
+
+#padded-globe p {
+	position: relative;
+	left: 35px;
+    top: 4px;
+}
+
+#mini-plus {
+	width: 16px;
+    height: 16px;
+    background-image: url('interactive_sprites_FB.png');
+    background-position: 0 -81px;
+    background-size: 27px 287px;
+    position: relative;
+    left: 15px;
+    margin-bottom: 40px;
+}
+
+#mini-plus p {
+	position: relative;
+	width: 200px;
+	left: 30px;
+	color: #4080ff;
+}
+
+hr {
+	height: 0;
+	width: 340px;
+    margin-top: -18px;
+    margin-bottom: 20px;
+
+}
+
+#loc-marker {
+	width: 12px;
+    height: 12px;
+    background-image: url('interactive_sprites_FB.png');
+    background-position: -13px -248px;
+    background-size: 27px 287px;
+    position: relative;
+    left: 17px;
+    margin-bottom: 25px;
+}
+
+#loc-marker p {
+	position: relative;
+	width: 200px;
+	left:  28px;
+}
+
+#photo-add {
+	width: 16px;
+    height: 16px;
+    background-image: url('fb-sprite-5.png');
+    background-position: 0 -224px;
+    background-size: 35px 887px;
+    position: relative;
+    left: 14px;
+    top: 5px;
+}
+
+#photo-add p {
+	position: relative;
+	width: 200px;
+	left: 29px;
+	color: #4080ff;
 }
